@@ -14,6 +14,7 @@ int main()
 {
 	string companyName;
 	int yearBuilt, doorCount;
+	double capacity;
 
 	cout << "Vehicle:" << endl;
 	cout << "Enter the manufacturer: " << endl;
@@ -41,8 +42,20 @@ int main()
 	car1.setDoors(doorCount);
 	car1.displayInfo();
 
+	cin.ignore();
+	cout << "Truck:" << endl;
+	cout << "Enter the manufacturer: " << endl;
+	getline(cin, companyName);
+	cout << "Enter the year built: " << endl;
+	cin >> yearBuilt;
+	cout << "Enter the towing capacity:" << endl;
+	cin >> capacity;
 
-
+	Truck truck1;
+	truck1.setManufacturer(companyName);
+	truck1.setYear(yearBuilt);
+	truck1.setTowingCapacity(capacity);
+	truck1.displayInfo();
 
 	return 0;
 }
