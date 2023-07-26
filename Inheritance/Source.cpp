@@ -13,8 +13,9 @@ using namespace std;
 int main()
 {
 	string companyName;
-	int yearBuilt;
+	int yearBuilt, doorCount;
 
+	cout << "Vehicle:" << endl;
 	cout << "Enter the manufacturer: " << endl;
 	getline(cin, companyName);
 	cout << "Enter the year built: " << endl;
@@ -24,6 +25,22 @@ int main()
 	vehicle1.setManufacturer(companyName);
 	vehicle1.setYear(yearBuilt);
 	vehicle1.displayInfo();
+
+	cin.ignore();
+	cout << "Car:" << endl;
+	cout << "Enter the manufacturer: " << endl;
+	getline(cin, companyName);
+	cout << "Enter the year built: " << endl;
+	cin >> yearBuilt;
+	cout << "Enter the number of doors: " << endl;
+	cin >> doorCount;
+
+	Car car1;
+	car1.setManufacturer(companyName);
+	car1.setYear(yearBuilt);
+	car1.setDoors(doorCount);
+	car1.displayInfo();
+
 
 
 
